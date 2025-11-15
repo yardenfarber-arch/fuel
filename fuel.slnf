@@ -1,8 +1,38 @@
-{
-  "solution": {
-    "path": "..\\source\\repos\\ConsoleApp1\\ConsoleApp1.sln",
-    "projects": [
-      "ConsoleApp1\\ConsoleApp1.csproj"
-    ]
+ Console.WriteLine("Enter how much fuel do you use?");
+ double fuel= double.Parse(Console.ReadLine());
+ Console.WriteLine(" enter if you isBusiness");
+ bool isBusiness = bool.Parse(Console.ReadLine());
+
+ if (fuel < 301)
+ {
+     fuel = 0.5;
+
   }
-}
+ else if (fuel < 601 && fuel > 300)
+ {
+     fuel = 0.7;
+
+
+ }
+ else if (fuel > 600)
+ {
+     fuel = 1;
+ }
+ else {
+     Console.WriteLine("Invalid input");
+ }
+
+
+       
+     
+     if (isBusiness== true)
+     {
+         fuel = fuel/0.15;
+         Console.WriteLine(" This will cost per km " + fuel);
+     }
+     else
+     {
+         fuel = fuel/0.05;
+         Console.WriteLine(" This will cost per km " + fuel);
+     }
+                
